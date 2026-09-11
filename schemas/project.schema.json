@@ -1,0 +1,331 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-project-playground.github.io/ai-project-atlas/schemas/project.schema.json",
+  "title": "AI Project Atlas Project",
+  "description": "Machine-readable contract for hands-on AI/ML projects submitted to AI Project Atlas.",
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "domain",
+    "topics",
+    "project_type",
+    "difficulty",
+    "status",
+    "technologies",
+    "capabilities"
+  ],
+
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Stable unique project identifier, for example ml-001."
+    },
+
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+
+    "domain": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+
+    "project_type": {
+      "type": "string",
+      "enum": [
+        "mathematical_implementation",
+        "algorithm_implementation",
+        "data_analysis",
+        "machine_learning",
+        "deep_learning",
+        "generative_ai",
+        "rag_system",
+        "graph_ai",
+        "agentic_ai",
+        "ai_application",
+        "mlops",
+        "research_prototype",
+        "benchmark",
+        "experiment",
+        "other"
+      ]
+    },
+
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced",
+        "expert"
+      ]
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "in_progress",
+        "completed",
+        "experimental",
+        "archived"
+      ]
+    },
+
+    "technologies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "LEARN",
+          "RETRIEVE",
+          "GENERATE",
+          "PREDICT",
+          "CLASSIFY",
+          "REASON",
+          "REMEMBER",
+          "PLAN",
+          "ACT",
+          "PERCEIVE",
+          "EVALUATE"
+        ]
+      },
+      "uniqueItems": true
+    },
+
+    "learning_outcomes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+
+    "artifacts": {
+      "$ref": "#/$defs/artifacts"
+    },
+
+    "experiences": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/experience"
+      },
+      "uniqueItems": true
+    },
+
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationship"
+      }
+    }
+  },
+
+  "$defs": {
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "github": {
+          "$ref": "#/$defs/url"
+        },
+        "notebook": {
+          "$ref": "#/$defs/url"
+        },
+        "demo": {
+          "$ref": "#/$defs/url"
+        },
+        "model": {
+          "$ref": "#/$defs/url"
+        },
+        "dataset": {
+          "$ref": "#/$defs/url"
+        },
+        "documentation": {
+          "$ref": "#/$defs/url"
+        },
+        "video": {
+          "$ref": "#/$defs/url"
+        },
+        "report": {
+          "$ref": "#/$defs/url"
+        },
+        "results": {
+          "$ref": "#/$defs/url"
+        }
+      }
+    },
+
+    "experience": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+
+        "description": {
+          "type": "string"
+        },
+
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "LEARN",
+              "RETRIEVE",
+              "GENERATE",
+              "PREDICT",
+              "CLASSIFY",
+              "REASON",
+              "REMEMBER",
+              "PLAN",
+              "ACT",
+              "PERCEIVE",
+              "EVALUATE"
+            ]
+          },
+          "uniqueItems": true
+        },
+
+        "artifacts": {
+          "$ref": "#/$defs/artifacts"
+        },
+
+        "execution": {
+          "$ref": "#/$defs/execution"
+        }
+      }
+    },
+
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requested"
+      ],
+      "properties": {
+        "requested": {
+          "type": "boolean"
+        },
+
+        "mode": {
+          "type": "string",
+          "enum": [
+            "browser",
+            "notebook",
+            "external_demo",
+            "sandbox"
+          ]
+        },
+
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+
+        "url": {
+          "$ref": "#/$defs/url"
+        }
+      }
+    },
+
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "target"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "REQUIRES",
+            "BUILDS_ON",
+            "RELATED_TO",
+            "DEMONSTRATES",
+            "USES_TECHNOLOGY",
+            "USES_MODEL",
+            "USES_DATASET",
+            "PRODUCES"
+          ]
+        },
+
+        "target": {
+          "type": "string",
+          "minLength": 1
+        },
+
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+
+    "url": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}
