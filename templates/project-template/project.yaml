@@ -1,0 +1,79 @@
+schema_version: "1.0"
+
+# Unique Atlas project identifier.
+# Example: ml-001
+id: ""
+
+# Human-readable project title.
+title: ""
+
+# Primary catalogue domain.
+# Example: Machine Learning
+domain: ""
+
+# Concepts demonstrated or used by this project.
+topics: []
+
+# What kind of hands-on project this is.
+# See docs/PROJECT_CONTRACT.md for the complete vocabulary.
+project_type: ""
+
+# beginner | intermediate | advanced | expert
+difficulty: ""
+
+# planned | in_progress | completed | experimental | archived
+status: ""
+
+# Languages, frameworks, libraries, platforms, APIs, or other technologies used.
+technologies: []
+
+# Capabilities demonstrated by the project.
+# Available values are defined by the project schema.
+capabilities: []
+
+# Optional: concrete things a learner should understand or be able to do.
+learning_outcomes: []
+
+
+# Optional discovery/search terms.
+tags: []
+
+# Optional links to project artifacts.
+artifacts:
+  # github: ""
+  # notebook: ""
+  # demo: ""
+  # model: ""
+  # dataset: ""
+  # documentation: ""
+  # video: ""
+  # report: ""
+  # results: ""
+
+# Optional: distinct ways to explore or execute parts of this project.
+# See docs/PROJECT_CONTRACT.md for the Experience and Execution model.
+experiences: []
+
+# Example:
+# experiences:
+#   - id: ""
+#     title: ""
+#     description: ""
+#     topics:
+#       - ""
+#     capabilities:
+#       - ""
+#     artifacts:
+#       github: ""
+#       notebook: ""
+#       demo: ""
+#     execution:
+#       requested: false
+
+# Optional relationships to other Atlas projects or entities.
+relationships: []
+
+# Example:
+# relationships:
+#   - type: BUILDS_ON
+#     target: ""
