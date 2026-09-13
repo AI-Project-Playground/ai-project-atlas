@@ -5,6 +5,7 @@ import numpy as np
 from ols.metrics import mean_squared_error, r_squared
 from ols.regression import OLSRegression
 from ols.dataset import create_regression_data
+from ols.comparison import compare_ols_models
 
 
 def test_ols_finds_simple_line():
@@ -141,3 +142,39 @@ def test_synthetic_dataset_is_reproducible():
 
     assert np.array_equal(X1, X2)
     assert np.array_equal(y1, y2)
+
+
+def test_our_ols_matches_scikit_learn():
+    X, y = create_regression_data(
+        number_of_samples=50,
+        random_seed=42,
+    )
+
+    results = compare_ols_models(X, y)
+
+    our_model = results["our_model"]
+    sklearn_model = results["scikit_learn"]
+
+    # Our implementation and scikit-learn should estimate
+    # essentially the same intercept.
+    assert np.isclose(
+        our_model["intercept"],
+        sklearn_model["intercept"],
+    )
+
+    # They should also estimate essentially the same coefficient.
+    assert np.isclose(
+        our_model["coefficient"],
+        sklearn_model["coefficient"],
+    )
+
+    # Their predictions should lead to the same MSE and R².
+    assert np.isclose(
+        our_model["mse"],
+        sklearn_model["mse"],
+    )
+
+    assert np.isclose(
+        our_model["r_squared"],
+        sklearn_model["r_squared"],
+    )
