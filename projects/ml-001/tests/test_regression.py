@@ -2,6 +2,7 @@
 
 import numpy as np
 
+from ols.metrics import mean_squared_error, r_squared
 from ols.regression import OLSRegression
 
 
@@ -73,3 +74,48 @@ def test_ols_predicts_correct_values():
 
     # Compare the model's predictions with our expected values.
     assert np.allclose(predictions, expected)
+
+
+def test_mean_squared_error():
+    """
+    Test our MSE implementation with simple values.
+
+    Actual values:
+        [10, 20, 30]
+
+    Predictions:
+        [11, 18, 31]
+
+    Errors:
+        [-1, 2, -1]
+
+    Squared errors:
+        [1, 4, 1]
+
+    MSE:
+        (1 + 4 + 1) / 3 = 2
+    """
+
+    y_true = np.array([10, 20, 30])
+    y_pred = np.array([11, 18, 31])
+
+    mse = mean_squared_error(y_true, y_pred)
+
+    assert np.isclose(mse, 2.0)
+
+
+def test_r_squared_for_perfect_predictions():
+    """
+    Test R² when predictions are exactly correct.
+
+    When a model predicts every value perfectly:
+
+        R² = 1.0
+    """
+
+    y_true = np.array([10, 20, 30])
+    y_pred = np.array([10, 20, 30])
+
+    r2 = r_squared(y_true, y_pred)
+
+    assert np.isclose(r2, 1.0)
