@@ -60,7 +60,18 @@ tags:
 artifacts: {}
 
 # Optional: distinct ways to explore or execute parts of this project.
-experiences: []
+experiences:
+  - id: "interactive-streamlit"
+    title: "Interactive OLS Regression Explorer"
+    description: "Interactively generate synthetic regression data, train the OLS model, inspect evaluation metrics, visualize the regression line, and compare the implementation with scikit-learn."
+    capabilities:
+      - LEARN
+      - PREDICT
+      - EVALUATE
+    execution:
+      requested: true
+      mode: "external_demo"
+      provider: "Streamlit"
 
 # Optional relationships to other Atlas projects or entities.
 relationships: []
