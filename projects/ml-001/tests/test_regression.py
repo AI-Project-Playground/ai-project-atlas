@@ -4,6 +4,7 @@ import numpy as np
 
 from ols.metrics import mean_squared_error, r_squared
 from ols.regression import OLSRegression
+from ols.dataset import create_regression_data
 
 
 def test_ols_finds_simple_line():
@@ -119,3 +120,24 @@ def test_r_squared_for_perfect_predictions():
     r2 = r_squared(y_true, y_pred)
 
     assert np.isclose(r2, 1.0)
+
+def test_synthetic_dataset_has_expected_shape():
+    X, y = create_regression_data(number_of_samples=20)
+
+    assert X.shape == (20, 1)
+    assert y.shape == (20,)
+
+
+def test_synthetic_dataset_is_reproducible():
+    X1, y1 = create_regression_data(
+        number_of_samples=20,
+        random_seed=42,
+    )
+
+    X2, y2 = create_regression_data(
+        number_of_samples=20,
+        random_seed=42,
+    )
+
+    assert np.array_equal(X1, X2)
+    assert np.array_equal(y1, y2)
