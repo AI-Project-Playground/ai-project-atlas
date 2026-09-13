@@ -1,0 +1,66 @@
+schema_version: "1.0"
+
+# Unique Atlas project identifier.
+id: "ml-001"
+
+# Human-readable project title.
+title: "Ordinary Least Squares Regression from Scratch"
+
+# Primary catalogue domain.
+domain: "Machine Learning"
+
+# Concepts demonstrated or used by this project.
+topics:
+  - Linear Regression
+  - Ordinary Least Squares
+  - Least Squares Estimation
+  - Matrix Algebra
+  - Model Evaluation
+
+# What kind of hands-on project this is.
+project_type: "mathematical_implementation"
+
+# beginner | intermediate | advanced | expert
+difficulty: "beginner"
+
+# planned | in_progress | completed | experimental | archived
+status: "in_progress"
+
+# Languages, frameworks, libraries, platforms, APIs, or other technologies used.
+technologies:
+  - Python
+  - NumPy
+  - scikit-learn
+  - Streamlit
+
+# Capabilities demonstrated by the project.
+capabilities:
+  - PREDICT
+  - EVALUATE
+
+# Concrete things a learner should understand or be able to do.
+learning_outcomes:
+  - Understand the mathematics behind ordinary least squares regression.
+  - Implement linear regression using NumPy without relying on a machine learning library.
+  - Understand the role of the design matrix and regression coefficients.
+  - Compare a from-scratch implementation with scikit-learn.
+  - Evaluate regression models using MSE and R-squared.
+
+# Discovery/search terms.
+tags:
+  - machine-learning
+  - linear-regression
+  - ordinary-least-squares
+  - regression
+  - numpy
+  - scikit-learn
+  - from-scratch
+
+# Optional links to project artifacts.
+artifacts: {}
+
+# Optional: distinct ways to explore or execute parts of this project.
+experiences: []
+
+# Optional relationships to other Atlas projects or entities.
+relationships: []
