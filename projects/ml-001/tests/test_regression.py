@@ -6,6 +6,7 @@ from ols.metrics import mean_squared_error, r_squared
 from ols.regression import OLSRegression
 from ols.dataset import create_regression_data
 from ols.comparison import compare_ols_models
+from ols.visualization import plot_regression_line
 
 
 def test_ols_finds_simple_line():
@@ -178,3 +179,18 @@ def test_our_ols_matches_scikit_learn():
         our_model["r_squared"],
         sklearn_model["r_squared"],
     )
+
+
+def test_regression_plot_returns_a_figure():
+    X, y = create_regression_data(
+        number_of_samples=20,
+        random_seed=42,
+    )
+
+    model = OLSRegression()
+    model.fit(X, y)
+
+    figure = plot_regression_line(X, y, model)
+
+    assert figure is not None
+    assert len(figure.axes) == 1
