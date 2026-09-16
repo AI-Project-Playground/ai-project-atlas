@@ -144,7 +144,7 @@ async function showProjectDetails(projectId) {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            💻 View Source Code
+                            💻 View Code on GitHub
                         </a>
                     </p>
                 `
@@ -170,12 +170,21 @@ async function showProjectDetails(projectId) {
         const runButton = document.getElementById("run-project");
 
         if (runButton) {
-            runButton.addEventListener("click", () => {
-                window.open(
-                    "http://localhost:8501",
-                    "_blank"
-                );
-            });
+            const execution =
+                project.experiences &&
+                project.experiences[0] &&
+                project.experiences[0].execution;
+
+            const executionUrl = execution && execution.url;
+
+            if (execution && execution.requested && executionUrl) {
+                runButton.addEventListener("click", () => {
+                    window.open(executionUrl, "_blank");
+                });
+            } else {
+                runButton.disabled = true;
+                runButton.textContent = "Demo Unavailable";
+            }
         }
     } catch (error) {
         projectDetail.innerHTML = `
