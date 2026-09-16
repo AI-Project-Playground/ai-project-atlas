@@ -4,6 +4,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 
 from importer.import_project import import_project
 
@@ -17,6 +18,17 @@ WEBSITE_DIRECTORY = PROJECT_ROOT / "website"
 app = FastAPI(
     title="AI Project Atlas",
     description="Backend API for the AI Project Atlas MVP.",
+)
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://ai-project-atlas.onrender.com",
+    ],
+    allow_credentials=False,
+    allow_methods=["GET"],
+    allow_headers=["*"],
 )
 
 
