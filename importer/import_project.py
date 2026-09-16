@@ -9,8 +9,6 @@ from importer.models import ImportedProject
 from validator.validate import validate_project
 
 
-
-
 def import_project(
     project_file: str | Path,
     schema_file: str | Path,
