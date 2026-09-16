@@ -57,7 +57,8 @@ tags:
   - from-scratch
 
 # Optional links to project artifacts.
-artifacts: {}
+artifacts:
+  github: "https://github.com/AI-Project-Playground/ai-project-atlas/tree/main/projects/ml-001"
 
 # Optional: distinct ways to explore or execute parts of this project.
 experiences:
