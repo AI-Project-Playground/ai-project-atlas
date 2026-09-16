@@ -18,7 +18,7 @@ dev = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["validator*"]
+include = ["validator*", "importer*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
