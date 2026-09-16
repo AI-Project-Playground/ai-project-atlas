@@ -73,6 +73,7 @@ experiences:
       requested: true
       mode: "external_demo"
       provider: "Streamlit"
+      url: "https://ai-project-atlas-ml-001.streamlit.app/"
 
 # Optional relationships to other Atlas projects or entities.
 relationships: []
