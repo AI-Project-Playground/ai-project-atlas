@@ -1,8 +1,13 @@
+const API_BASE_URL = "https://ai-project-atlas-api.onrender.com";
+
+
 async function loadProjects() {
     const projectList = document.getElementById("project-list");
 
     try {
-        const response = await fetch("/api/projects");
+        const response = await fetch(
+            `${API_BASE_URL}/api/projects`
+        );
 
         if (!response.ok) {
             throw new Error("Could not load projects.");
@@ -68,7 +73,7 @@ async function showProjectDetails(projectId) {
 
     try {
         const response = await fetch(
-            `/api/projects/${projectId}`
+            `${API_BASE_URL}/api/projects/${projectId}`
         );
 
         if (!response.ok) {
