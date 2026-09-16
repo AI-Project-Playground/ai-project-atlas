@@ -144,6 +144,17 @@ async function showProjectDetails(projectId) {
                 : ""
             }
         `;
+
+        const runButton = document.getElementById("run-project");
+
+        if (runButton) {
+            runButton.addEventListener("click", () => {
+                window.open(
+                    "http://localhost:8501",
+                    "_blank"
+                );
+            });
+        }
     } catch (error) {
         projectDetail.innerHTML = `
             <p>Unable to load project.</p>
