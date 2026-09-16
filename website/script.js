@@ -134,6 +134,23 @@ async function showProjectDetails(projectId) {
                     .join("")}
             </ul>
 
+            ${project.artifacts && project.artifacts.github
+                ? `
+                    <h2>Project Resources</h2>
+
+                    <p>
+                        <a
+                            href="${project.artifacts.github}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            💻 View Source Code
+                        </a>
+                    </p>
+                `
+                : ""
+            }
+
             ${project.experiences && project.experiences.length > 0
                 ? `
                     <h2>Interactive Experience</h2>
