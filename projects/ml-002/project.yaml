@@ -1,0 +1,62 @@
+﻿schema_version: "1.0"
+id: "ml-002"
+title: "Emotion Prediction using NLP"
+domain: "Machine Learning"
+
+topics:
+  - Natural Language Processing
+  - Text Classification
+  - Text Preprocessing
+  - TF-IDF
+  - Logistic Regression
+  - Emotion Classification
+
+project_type: "machine_learning"
+difficulty: "beginner"
+status: "completed"
+
+technologies:
+  - Python
+  - NLTK
+  - scikit-learn
+  - Pandas
+  - NumPy
+  - Joblib
+  - Streamlit
+
+capabilities:
+  - CLASSIFY
+
+learning_outcomes:
+  - Understand text preprocessing techniques used in emotion classification.
+  - Understand how TF-IDF converts text into numerical features.
+  - Train a Logistic Regression model for text classification.
+  - Evaluate a machine learning model for emotion prediction.
+  - Use a trained NLP model to classify user-provided text.
+
+tags:
+  - machine-learning
+  - nlp
+  - emotion-classification
+  - text-classification
+  - tf-idf
+  - logistic-regression
+  - text-preprocessing
+  - streamlit
+
+artifacts:
+  github: "https://github.com/Abhinandan2023/emotion-prediction-ml"
+
+experiences:
+  - id: "interactive-streamlit"
+    title: "Interactive Emotion Prediction"
+    description: "Enter text and use the trained machine learning model to predict the associated emotion."
+    capabilities:
+      - CLASSIFY
+    execution:
+      requested: true
+      mode: "external_demo"
+      provider: "Streamlit"
+      url: "https://emotion-prediction-ml.streamlit.app/"
+
+relationships: []
