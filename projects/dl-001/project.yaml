@@ -1,0 +1,63 @@
+schema_version: "1.0"
+id: "dl-001"
+title: "AI Quote Generator using LSTM"
+domain: "Deep Learning"
+
+topics:
+  - LSTM
+  - Sequence Modeling
+  - Text Generation
+  - Natural Language Processing
+  - Next-Word Prediction
+  - Embeddings
+  - Temperature Sampling
+
+project_type: "deep_learning"
+difficulty: "intermediate"
+status: "completed"
+
+technologies:
+  - Python
+  - TensorFlow
+  - Keras
+  - NumPy
+  - Streamlit
+
+capabilities:
+  - GENERATE
+
+learning_outcomes:
+  - Understand how LSTM networks can be used for text generation.
+  - Understand how text is tokenized and converted into sequences for model training.
+  - Understand category-conditioned quote generation.
+  - Generate text using temperature-based sampling.
+  - Use a trained LSTM model to generate quotes interactively.
+
+tags:
+  - deep-learning
+  - lstm
+  - nlp
+  - text-generation
+  - quote-generation
+  - sequence-modeling
+  - tensorflow
+  - keras
+  - streamlit
+
+artifacts:
+  github: "https://github.com/AI-Project-Playground/ai-project-atlas/tree/main/projects/dl-001"
+  documentation: "https://github.com/Abhinandan2023/AI-Quote-Generator"
+
+experiences:
+  - id: "interactive-streamlit"
+    title: "Interactive AI Quote Generator"
+    description: "Generate category-conditioned quotes using the trained LSTM model with adjustable length, creativity, and repetition settings."
+    capabilities:
+      - GENERATE
+    execution:
+      requested: true
+      mode: "external_demo"
+      provider: "Streamlit"
+      url: "https://ai-quote-generator-lstm.streamlit.app/"
+
+relationships: []
