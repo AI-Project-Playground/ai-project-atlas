@@ -56,7 +56,7 @@ tags:
   - provider-agnostic
 
 artifacts:
-  github: "https://github.com/atanuduttagupta/ai-daily-practice"
+  github: "https://github.com/atanuduttagupta/ai-daily-practice/tree/main/basic-api-call"
 
 experiences:
   - id: "interactive-streamlit"
