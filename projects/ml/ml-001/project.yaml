@@ -58,7 +58,7 @@ tags:
 
 # Optional links to project artifacts.
 artifacts:
-  github: "https://github.com/AI-Project-Playground/ai-project-atlas/tree/main/projects/ml-001"
+  github: "https://github.com/AI-Project-Playground/ai-project-atlas/tree/main/projects/ml/ml-001"
 
 # Optional: distinct ways to explore or execute parts of this project.
 experiences:

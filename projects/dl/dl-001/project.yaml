@@ -45,7 +45,7 @@ tags:
   - streamlit
 
 artifacts:
-  github: "https://github.com/AI-Project-Playground/ai-project-atlas/tree/main/projects/dl-001"
+  github: "https://github.com/AI-Project-Playground/ai-project-atlas/tree/main/projects/dl/dl-001"
   documentation: "https://github.com/Abhinandan2023/AI-Quote-Generator"
 
 experiences:
