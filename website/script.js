@@ -1,5 +1,5 @@
-// const API_BASE_URL = "https://ai-project-atlas-api.onrender.com";
-const API_BASE_URL = "";
+const API_BASE_URL = "https://ai-project-atlas-api.onrender.com";
+// const API_BASE_URL = "";
 
 
 function getProjectIcon(project) {
