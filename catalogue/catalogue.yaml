@@ -1,0 +1,63 @@
+domains:
+  - key: "mathematical-foundations"
+    name: "Mathematics & Foundations"
+    code: "MATH"
+    display_order: 1
+    projects:
+      - id: "math-001"
+        catalogue_reference: "MATH-001"
+        display_order: 1
+
+  - key: "data-science"
+    name: "Data Science"
+    code: "DS"
+    display_order: 2
+    projects: []
+
+  - key: "machine-learning"
+    name: "Machine Learning"
+    code: "ML"
+    display_order: 3
+    projects:
+      - id: "ml-001"
+        catalogue_reference: "ML-001"
+        display_order: 1
+      - id: "ml-002"
+        catalogue_reference: "ML-002"
+        display_order: 2
+
+  - key: "deep-learning"
+    name: "Deep Learning"
+    code: "DL"
+    display_order: 4
+    projects:
+      - id: "dl-001"
+        catalogue_reference: "DL-001"
+        display_order: 1
+
+  - key: "generative-ai"
+    name: "Generative AI"
+    code: "GENAI"
+    display_order: 5
+    projects:
+      - id: "genai-001"
+        catalogue_reference: "GENAI-001"
+        display_order: 1
+
+  - key: "rag-knowledge"
+    name: "RAG & Knowledge"
+    code: "RAG"
+    display_order: 6
+    projects: []
+
+  - key: "graph-ai"
+    name: "Graph AI"
+    code: "GRAPH"
+    display_order: 7
+    projects: []
+
+  - key: "agentic-ai"
+    name: "Agentic AI"
+    code: "AGENT"
+    display_order: 8
+    projects: []
