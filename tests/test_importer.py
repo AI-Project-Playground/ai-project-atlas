@@ -6,7 +6,7 @@ def test_import_project_reads_project_metadata():
     """The importer should read a project's YAML metadata."""
 
     project = import_project(
-        "projects/ml-001/project.yaml",
+        "projects/ml/ml-001/project.yaml",
         "schemas/project.schema.json",
     )
 

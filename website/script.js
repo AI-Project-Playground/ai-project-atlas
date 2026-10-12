@@ -1,4 +1,63 @@
-const API_BASE_URL = "https://ai-project-atlas-api.onrender.com";
+// const API_BASE_URL = "https://ai-project-atlas-api.onrender.com";
+const API_BASE_URL = "";
+
+
+function getProjectIcon(project) {
+    const searchableText = [
+        ...(project.topics || []),
+        ...(project.tags || []),
+        project.project_type || "",
+        project.title || "",
+    ]
+        .join(" ")
+        .toLowerCase();
+
+    // Check specific topics before broader categories.
+    if (
+        searchableText.includes("vector") ||
+        searchableText.includes("linear algebra")
+    ) {
+        return "\u{1F9ED}"; // Compass
+    }
+
+    if (
+        searchableText.includes("lstm") ||
+        searchableText.includes("neural network") ||
+        searchableText.includes("deep learning")
+    ) {
+        return "\u{1F9E0}"; // Brain
+    }
+        
+    if (
+        searchableText.includes("nlp") ||
+        searchableText.includes("natural language processing") ||
+        searchableText.includes("natural language") ||
+        searchableText.includes("text classification") ||
+        searchableText.includes("text preprocessing") ||
+        searchableText.includes("emotion classification")
+    ) {
+        return "\u{1F4AC}"; // Speech bubble
+    }
+
+
+    if (
+        searchableText.includes("llm") ||
+        searchableText.includes("language model") ||
+        searchableText.includes("generative ai")
+    ) {
+        return "\u2728"; // Sparkles
+    }
+
+    if (
+        searchableText.includes("regression") ||
+        searchableText.includes("classification") ||
+        searchableText.includes("machine learning")
+    ) {
+        return "\u{1F4C8}"; // Chart
+    }
+
+    return "\u{1F916}"; // Robot fallback
+}
 
 
 async function loadProjects() {
@@ -17,16 +76,41 @@ async function loadProjects() {
 
         projectList.innerHTML = "";
 
+        const domainSections = new Map();
+
         for (const project of projects) {
+            if (!domainSections.has(project.domain)) {
+                const domainSection = document.createElement("section");
+                domainSection.className = "catalogue-domain";
+
+                domainSection.innerHTML = `
+                    <h3>${project.domain}</h3>
+                    <div class="catalogue-domain-projects"></div>
+                `;
+
+                projectList.appendChild(domainSection);
+
+                domainSections.set(
+                    project.domain,
+                    domainSection.querySelector(".catalogue-domain-projects")
+                );
+            }
+
             const projectCard = document.createElement("article");
+            const projectIcon = getProjectIcon(project);
 
             projectCard.innerHTML = `
-                <h3>${project.id.toUpperCase()} — ${project.title}</h3>
-
-                <p>
-                    <strong>Domain:</strong>
-                    ${project.domain}
-                </p>
+                <h3 class="project-heading">
+                    <span class="project-icon" aria-hidden="true">
+                        ${projectIcon}
+                    </span>
+                    <span class="project-reference">
+                        ${project.id.toUpperCase()}
+                    </span>
+                    <span class="project-title">
+                        — ${project.title}
+                    </span>
+                </h3>
 
                 <p>
                     <strong>Difficulty:</strong>
@@ -49,8 +133,11 @@ async function loadProjects() {
                 showProjectDetails(project.id);
             });
 
-            projectList.appendChild(projectCard);
+            domainSections
+                .get(project.domain)
+                .appendChild(projectCard);
         }
+
     } catch (error) {
         projectList.innerHTML = `
             <p>Unable to load projects.</p>
