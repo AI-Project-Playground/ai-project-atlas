@@ -1,6 +1,11 @@
 // const API_BASE_URL = "https://ai-project-atlas-api.onrender.com";
-const API_BASE_URL = "http://127.0.0.1:8000";
+// const API_BASE_URL = "http://127.0.0.1:8000";
 // const API_BASE_URL = "";
+const API_BASE_URL =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+        ? "http://127.0.0.1:8000"
+        : "https://ai-project-atlas-api.onrender.com";
 
 
 function getProjectIcon(project) {
