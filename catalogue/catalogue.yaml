@@ -61,3 +61,12 @@ domains:
     code: "AGENT"
     display_order: 8
     projects: []
+
+  - key: "mlops"
+    name: "MLOps"
+    code: "MLOPS"
+    display_order: 9
+    projects:
+      - id: "mlops-001"
+        catalogue_reference: "MLOPS-001"
+        display_order: 1

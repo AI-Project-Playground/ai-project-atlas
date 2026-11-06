@@ -52,7 +52,7 @@ tags:
   - machine-learning-foundations
 
 artifacts:
-  github: "https://github.com/atanuduttagupta/ai-daily-practice/tree/main/math-vector-operation"
+  github: "https://github.com/atanuduttagupta/ai-daily-practice/tree/main/Math/math-vector-operation"
 
 experiences:
   - id: "interactive-streamlit"

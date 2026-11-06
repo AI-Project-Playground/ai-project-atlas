@@ -58,7 +58,7 @@ tags:
 
 # Optional links to project artifacts.
 artifacts:
-  github: "https://github.com/AI-Project-Playground/ai-project-atlas/tree/main/projects/ml/ml-001"
+  github: "https://github.com/atanuduttagupta/ai-daily-practice/tree/main/ML/OLS"
 
 # Optional: distinct ways to explore or execute parts of this project.
 experiences:
@@ -73,7 +73,7 @@ experiences:
       requested: true
       mode: "external_demo"
       provider: "Streamlit"
-      url: "https://ai-project-atlas-ml-001.streamlit.app/"
+      url: "https://ai-daily-practice-ols.streamlit.app/"
 
 # Optional relationships to other Atlas projects or entities.
 relationships: []

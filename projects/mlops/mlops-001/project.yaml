@@ -1,0 +1,89 @@
+schema_version: "1.0"
+
+id: mlops-001
+title: FastAPI Prompt Store
+domain: MLOps
+
+topics:
+  - REST API Development
+  - FastAPI
+  - Pydantic
+  - API Request Validation
+  - HTTP Methods
+  - HTTP Request and Response
+  - ASGI
+  - Application Serving
+  - Frontend and Backend Separation
+  - HTTPX
+  - Streamlit
+  - Serverless Deployment
+  - Cloud Deployment
+  - Token Estimation
+
+project_type: mlops
+difficulty: beginner
+status: completed
+
+technologies:
+  - Python
+  - FastAPI
+  - Pydantic
+  - HTTPX
+  - Streamlit
+  - Cloudflare Workers
+  - PyWrangler
+  - Streamlit Community Cloud
+  - Git
+  - GitHub
+
+capabilities:
+  - LEARN
+  - RETRIEVE
+
+learning_outcomes:
+  - Understand how REST APIs expose application functionality through HTTP endpoints.
+  - Build API routes using FastAPI and define request and response models.
+  - Use Pydantic to validate incoming API data and enforce field constraints.
+  - Understand the role of ASGI and how Uvicorn serves a FastAPI application locally.
+  - Connect a separate Streamlit frontend to a FastAPI backend using HTTPX.
+  - Deploy a FastAPI backend to Cloudflare Workers and a Streamlit frontend to Streamlit Community Cloud.
+  - Understand the separation of frontend hosting and backend hosting in a cloud application.
+  - Recognize the limitations of in-memory application storage in a serverless deployment.
+
+tags:
+  - mlops
+  - fastapi
+  - rest-api
+  - api-development
+  - pydantic
+  - streamlit
+  - httpx
+  - cloudflare-workers
+  - serverless
+  - cloud-deployment
+  - application-serving
+
+artifacts:
+  github: "https://github.com/atanuduttagupta/ai-daily-practice/tree/main/AI/mlops-rest-api-call"
+  demo: "https://ai-daily-practice-mlops-rest-api-call.streamlit.app/"
+
+experiences:
+  - id: interactive-prompt-store
+    title: Interactive Prompt Store
+    description: Create prompts, list saved prompts, retrieve a prompt by ID, and estimate approximate token counts through a Streamlit interface connected to a cloud-hosted FastAPI backend.
+    capabilities:
+      - LEARN
+      - RETRIEVE
+    topics:
+      - REST API Development
+      - FastAPI
+      - Streamlit
+      - HTTPX
+      - Frontend and Backend Separation
+    execution:
+      requested: true
+      mode: external_demo
+      provider: Streamlit
+      url: "https://ai-daily-practice-mlops-rest-api-call.streamlit.app/"
+
+relationships: []

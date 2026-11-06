@@ -279,7 +279,7 @@ https://ai-daily-practice-basic-api-call.streamlit.app/
 
 ## GitHub Repository
 
-https://github.com/atanuduttagupta/ai-daily-practice/tree/main/basic-api-call
+https://github.com/atanuduttagupta/ai-daily-practice/tree/main/AI/basic-api-call
 
 ## What This Project Teaches
 

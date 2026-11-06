@@ -1,0 +1,36 @@
+python -m validator.validate projects/mlops/mlops-001/project.yaml schemas/project.schema.json
+python -m pytest tests/test_importer.py -v
+python -m importer.import_project projects/mlops/mlops-001/project.yaml schemas/project.schema.json
+
+added to catalogue/catalogue.yaml
+  - key: "mlops"
+    name: "MLOps"
+    code: "MLOPS"
+    display_order: 9
+    projects:
+      - id: "mlops-001"
+        catalogue_reference: "MLOPS-001"
+        display_order: 1
+
+python -m pytest tests/test_catalogue.py -v
+
+python -m pytest -v
+
+run local
+
+backend ->
+
+python -m uvicorn website.backend.app:app --reload --port 8000
+check http://127.0.0.1:8000/api/projects?utm_source=chatgpt.com
+
+front end ->
+
+http://127.0.0.1:8000/website/
+or
+
+python -m http.server 5501 --directory website
+
+
+streamlit local
+python -m streamlit run frontend/app.py --server.runOnSave true
+python -m streamlit run frontend/app.py
