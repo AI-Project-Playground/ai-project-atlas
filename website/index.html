@@ -1,31 +1,129 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AI Project Atlas</title>
+    <meta
+        name="description"
+        content="Explore hands-on AI and machine learning projects. Build, learn, share and grow with AI Project Atlas."
+    >
+
+    <title>AI Project Atlas | Build · Learn · Share · Grow</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>AI Project Atlas</h1>
-        <p>Explore AI and Machine Learning Projects</p>
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header" id="home">
+
+        <div class="header-brand">
+            <a href="#home" class="brand-link">
+                <span class="brand-icon">🤖</span>
+
+                <span class="brand-text">
+                    <strong>AI Project Atlas</strong>
+                    <small>Build · Learn · Share · Grow</small>
+                </span>
+            </a>
+        </div>
+
+        <nav class="main-navigation" aria-label="Main navigation">
+            <a href="#home" class="active">Home</a>
+            <a href="#catalogue-view">Projects</a>
+            <a href="#about">About</a>
+        </nav>
+
     </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
 
     <main>
 
-        <section id="catalogue-view">
-            <h2>Projects</h2>
+        <!-- ================= HERO SECTION ================= -->
+
+        <section class="hero-section" aria-labelledby="hero-title">
+
+            <div class="hero-content">
+
+                <span class="hero-eyebrow">
+                    LEARN BY BUILDING
+                </span>
+
+                <h1 id="hero-title">
+                    Real Projects<br>
+                    for a <span>Smarter Tomorrow</span>
+                </h1>
+
+                <p class="hero-description">
+                    A growing collection of hands-on AI and
+                    Machine Learning projects, from mathematical
+                    foundations to frontier AI.
+                </p>
+
+                <div class="hero-highlights">
+                    <span>✦ Open Source</span>
+                    <span>✦ Hands-on Learning</span>
+                    <span>✦ Beginner to Advanced</span>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#catalogue-view" class="button-primary">
+                        Explore Projects →
+                    </a>
+
+                    <a href="#about" class="button-secondary">
+                        Discover Atlas
+                    </a>
+                </div>
+
+                <p class="hero-tagline">
+                    Build. Break. Learn. Repeat. 🚀
+                </p>
+
+            </div>
+
+            <div class="hero-visual">
+                <img
+                    src="assets/hero-learning.png"
+                    alt="Two learners exploring artificial intelligence and technology together"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECT CATALOGUE ================= -->
+
+        <section id="catalogue-view" class="catalogue-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Explore Our Projects</h2>
+                    <p>
+                        Discover practical projects and build
+                        your AI skills step by step.
+                    </p>
+                </div>
+            </div>
 
             <div id="project-list">
                 Loading projects...
             </div>
+
         </section>
 
+
+        <!-- ================= PROJECT DETAILS ================= -->
+
         <section id="project-detail-view" hidden>
+
             <button id="back-to-projects">
                 ← Back to Projects
             </button>
@@ -33,15 +131,40 @@
             <div id="project-detail">
                 Loading project...
             </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="about-section">
+
+            <h2>Build · Learn · Share · Grow</h2>
+
+            <p>
+                AI Project Atlas is a growing collection of
+                practical AI and Machine Learning projects,
+                built by curious minds who believe in learning
+                through experimentation.
+            </p>
+
         </section>
 
     </main>
 
-    <footer>
-        <p>AI Project Atlas</p>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+        <p>
+            © 2026 AI Project Atlas.
+            Open source. Always learning.
+        </p>
     </footer>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>

@@ -1,6 +1,6 @@
-python -m validator.validate projects/mlops/mlops-001/project.yaml schemas/project.schema.json
+python -m validator.validate projects/ml/ml-004/project.yaml schemas/project.schema.json
 python -m pytest tests/test_importer.py -v
-python -m importer.import_project projects/mlops/mlops-001/project.yaml schemas/project.schema.json
+python -m importer.import_project projects/ml/ml-004/project.yaml schemas/project.schema.json
 
 added to catalogue/catalogue.yaml
   - key: "mlops"

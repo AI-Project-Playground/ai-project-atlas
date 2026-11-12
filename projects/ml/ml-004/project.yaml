@@ -1,0 +1,93 @@
+schema_version: "1.0"
+id: "ml-004"
+title: "CNN Basics: Convolution, Feature Maps, and Classification"
+domain: "Machine Learning"
+topics:
+  - Computer Vision
+  - Convolutional Neural Networks
+  - 2D Convolution
+  - Convolution Filters and Kernels
+  - Feature Maps
+  - Local Receptive Fields
+  - Parameter Sharing
+  - ReLU Activation
+  - Flattening
+  - Fully Connected Layers
+  - Softmax Classification
+  - Backpropagation
+  - Gradient Checking
+  - Adam Optimizer
+  - Image Classification
+  - Logistic Regression Baseline
+project_type: "deep_learning"
+difficulty: "beginner"
+status: "in_progress"
+technologies:
+  - Python
+  - NumPy
+  - scikit-learn
+  - Streamlit
+  - PyTorch
+capabilities:
+  - LEARN
+  - CLASSIFY
+  - PREDICT
+  - EVALUATE
+learning_outcomes:
+  - Explain how a convolution filter slides over an image and produces a feature map.
+  - Implement 2D convolution using Python loops and a vectorized NumPy approach.
+  - Explain local receptive fields and parameter sharing.
+  - Calculate convolution output dimensions from input size, kernel size, padding, and stride.
+  - Calculate the trainable parameters in convolutional and fully connected layers.
+  - Trace the data flow through convolution, ReLU, flattening, dense classification, and softmax.
+  - Implement a small CNN and its backpropagation using NumPy.
+  - Validate analytical gradients using finite-difference gradient checking.
+  - Train and evaluate the CNN on the scikit-learn handwritten digits dataset.
+  - Compare the CNN with a logistic regression baseline.
+  - Compare a from-scratch NumPy implementation with an optional PyTorch implementation.
+tags:
+  - computer-vision
+  - cnn
+  - convolution
+  - feature-maps
+  - image-classification
+  - numpy
+  - from-scratch
+  - backpropagation
+  - streamlit
+artifacts:
+  github: "https://github.com/atanuduttagupta/ai-daily-practice/tree/main/ML/CNN-Basics"
+  documentation: "https://github.com/atanuduttagupta/ai-daily-practice/tree/main/ML/CNN-Basics/README.md"
+experiences:
+  - id: "interactive-cnn-explorer"
+    title: "Interactive CNN Basics Explorer"
+    description: "Explore convolution filters and feature maps, compare convolution and dense-layer parameter counts, train the NumPy TinyCNN, inspect evaluation results, and review core CNN concepts through a Streamlit interface."
+    topics:
+      - 2D Convolution
+      - Feature Maps
+      - Parameter Sharing
+      - CNN Training
+      - Model Evaluation
+    capabilities:
+      - LEARN
+      - CLASSIFY
+      - PREDICT
+      - EVALUATE
+    execution:
+      requested: true
+      mode: "external_demo"
+      provider: "Streamlit"
+      url: "https://ai-daily-practice-cnn-basics.streamlit.app/"      
+  - id: "pytorch-implementation-comparison"
+    title: "Optional PyTorch CNN Comparison"
+    description: "Run an optional PyTorch implementation of the same small CNN architecture to compare concise framework-based training with the manually implemented NumPy version."
+    topics:
+      - PyTorch
+      - Convolutional Neural Networks
+      - Automatic Differentiation
+      - Model Training
+    capabilities:
+      - LEARN
+      - CLASSIFY
+      - EVALUATE
+relationships: []

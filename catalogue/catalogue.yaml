@@ -25,6 +25,12 @@ domains:
       - id: "ml-002"
         catalogue_reference: "ML-002"
         display_order: 2
+      - id: "ml-003"
+        catalogue_reference: "ML-003"
+        display_order: 3
+      - id: "ml-004"
+        catalogue_reference: "ML-004"
+        display_order: 4  
 
   - key: "deep-learning"
     name: "Deep Learning"
