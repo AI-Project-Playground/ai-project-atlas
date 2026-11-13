@@ -68,6 +68,7 @@
         "research_prototype",
         "benchmark",
         "experiment",
+        "rag_engineering_lab",
         "other"
       ]
     },

@@ -54,7 +54,10 @@ domains:
     name: "RAG & Knowledge"
     code: "RAG"
     display_order: 6
-    projects: []
+    projects:
+      - id: "rag-001"
+        catalogue_reference: "RAG-001"
+        display_order: 1
 
   - key: "graph-ai"
     name: "Graph AI"

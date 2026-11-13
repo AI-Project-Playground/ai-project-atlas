@@ -1,0 +1,94 @@
+schema_version: "1.0"
+
+id: "rag-001"
+
+title: "RAG Chunking Strategies"
+
+domain: "Retrieval-Augmented Generation"
+
+topics:
+  - Retrieval-Augmented Generation
+  - RAG
+  - Document Processing
+  - Text Chunking
+  - Recursive Character Splitting
+  - Token-Based Splitting
+  - Markdown Structure-Aware Splitting
+  - Semantic Chunking
+  - LangChain
+  - Chonkie
+  - Information Retrieval
+  - BM25
+  - Dense Vector Retrieval
+  - Qdrant
+  - Evaluation Metrics
+
+project_type: "rag_engineering_lab"
+
+difficulty: "intermediate"
+
+status: "completed"
+
+technologies:
+  - Python
+  - LangChain
+  - LangChain Text Splitters
+  - tiktoken
+  - Chonkie
+  - Model2Vec
+  - Sentence Transformers
+  - Hugging Face
+  - Qdrant
+  - rank-bm25
+  - Streamlit
+  - pandas
+
+learning_outcomes:
+  - Understand why document chunking is required in Retrieval-Augmented Generation systems.
+  - Learn how to use LangChain RecursiveCharacterTextSplitter for recursive character-based chunking.
+  - Understand how token-based splitting differs from character-based splitting and how tiktoken is used to measure token counts.
+  - Learn how to split Markdown documents using heading structure and preserve heading information as chunk metadata.
+  - Understand semantic chunking and how Chonkie uses semantic information to identify chunk boundaries.
+  - Compare recursive character, token-based, Markdown structure-aware, and semantic chunking strategies.
+  - Understand how chunk size and overlap influence the number and content of generated chunks.
+  - Learn how BM25 lexical retrieval and dense vector retrieval can be used to evaluate the usefulness of generated chunks.
+  - Understand evaluation measures such as answer coverage, Hit@1, Hit@k, and average retrieved context size.
+  - Learn how to inspect chunk text and metadata through an interactive Streamlit application.
+  - Understand why a chunking strategy should be selected using representative evaluation data rather than a single metric or small test set.
+
+tags:
+  - rag
+  - retrieval-augmented-generation
+  - chunking
+  - text-splitting
+  - langchain
+  - chonkie
+  - semantic-chunking
+  - tokenization
+  - markdown
+  - bm25
+  - dense-retrieval
+  - vector-search
+  - qdrant
+  - sentence-transformers
+  - streamlit
+  - python
+  - evaluation
+
+capabilities:
+  - RETRIEVE
+
+artifacts:
+  github: "https://github.com/atanuduttagupta/ai-daily-practice/tree/main/AI/chunking-strategies"
+
+experiences:
+  - id: "interactive-streamlit"
+    title: "RAG Chunking Strategies Lab"
+    description: "Compare four chunking strategies—LangChain recursive character splitting, token-based splitting, Markdown structure-aware splitting with heading metadata, and Chonkie semantic chunking. Inspect generated chunks and metadata, compare retrieval metrics, and test retrieval using BM25 or dense vector search."
+    execution:
+      requested: true
+      mode: "external_demo"
+      provider: "Streamlit"
+      url: "https://ai-daily-practice-chunking-strategies.streamlit.app/"
+
+relationships: []

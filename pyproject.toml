@@ -6,17 +6,19 @@ build-backend = "setuptools.build_meta"
 name = "ai-project-atlas"
 version = "0.1.0"
 description = "AI Project Atlas validation and ingestion tools"
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = [
     "jsonschema>=4.26,<5",
     "PyYAML>=6.0,<7",
     "fastapi>=0.115,<1",
+    "starlette>=0.46,<1",
     "uvicorn[standard]>=0.30,<1",
 ]
 
 [project.optional-dependencies]
 dev = [
     "pytest>=9,<10",
+    "httpx>=0.27,<1",
 ]
 
 [tool.setuptools.packages.find]
