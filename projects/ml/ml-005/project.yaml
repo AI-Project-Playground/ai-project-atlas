@@ -1,0 +1,95 @@
+schema_version: "1.0"
+
+id: "ml-005"
+
+title: "K-Means & Gaussian Mixture Models"
+
+domain: "Machine Learning"
+
+topics:
+  - Unsupervised Learning
+  - Clustering
+  - K-Means
+  - Lloyd's Algorithm
+  - Centroids
+  - Inertia
+  - K-Means++
+  - Gaussian Mixture Models
+  - Gaussian Distributions
+  - Covariance Matrices
+  - Expectation-Maximization
+  - Hard Clustering
+  - Soft Clustering
+  - Cluster Model Selection
+  - Elbow Method
+  - Silhouette Score
+  - Adjusted Rand Index
+  - Bayesian Information Criterion
+  - Vector Quantization
+  - Vector Search
+
+project_type: "machine_learning"
+
+difficulty: "intermediate"
+
+status: "completed"
+
+technologies:
+  - Python
+  - scikit-learn
+  - NumPy
+  - Matplotlib
+  - Streamlit
+  - pandas
+
+capabilities:
+  - LEARN
+  - EVALUATE
+
+learning_outcomes:
+  - Understand clustering as an unsupervised-learning task.
+  - Implement K-Means clustering using scikit-learn and explain its assignment and centroid-update steps.
+  - Understand inertia and the geometric assumptions and limitations of K-Means.
+  - Fit Gaussian Mixture Models using scikit-learn and explain Gaussian components, means, covariance matrices, and mixture weights.
+  - Explain the Expectation-Maximization algorithm through its E-step and M-step.
+  - Compare hard cluster assignments with GMM soft membership probabilities.
+  - Explore GMM covariance types including full, tied, diagonal, and spherical.
+  - Compare inertia, silhouette score, Adjusted Rand Index, and GMM BIC.
+  - Understand why different cluster-selection criteria can recommend different values of k.
+  - Interpret clustering results and recognize the limitations of synthetic experiments.
+
+tags:
+  - machine-learning
+  - unsupervised-learning
+  - clustering
+  - k-means
+  - gaussian-mixture-model
+  - gmm
+  - expectation-maximization
+  - em-algorithm
+  - hard-clustering
+  - soft-clustering
+  - inertia
+  - silhouette
+  - adjusted-rand-index
+  - bic
+  - scikit-learn
+  - python
+  - streamlit
+  - vector-quantization
+  - vector-search
+
+artifacts:
+  github: "https://github.com/atanuduttagupta/ai-daily-practice/tree/main/ML/k-means-gmm"
+
+experiences:
+  - id: "interactive-streamlit"
+    title: "K-Means & GMM Interactive Lab"
+    description: "Explore K-Means and Gaussian Mixture Models on configurable synthetic 2-D data. Compare ARI and silhouette metrics, visualize true groups and model assignments, inspect GMM soft-membership probabilities, and evaluate candidate cluster counts using inertia, silhouette, and GMM BIC."
+    execution:
+      requested: true
+      mode: "external_demo"
+      provider: "Streamlit"
+      url: "https://ai-daily-practice-k-means-gmm.streamlit.app/"
+
+relationships: []
