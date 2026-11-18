@@ -1,0 +1,71 @@
+schema_version: '1.0'
+id: ml-006
+title: Monthly Car Sales Forecasting with Backtesting
+domain: Machine Learning
+topics:
+- Time Series Forecasting
+- Sales Forecasting
+- Time-Series Cross-Validation
+- Backtesting
+- Seasonality
+- Forecast Horizon
+- Baseline Models
+- ARIMA
+- Exponential Smoothing
+- Theta Method
+- Forecast Evaluation
+- MAE
+- RMSE
+- MAPE
+project_type: machine_learning
+difficulty: intermediate
+status: completed
+technologies:
+- Python
+- StatsForecast
+- pandas
+- NumPy
+- Matplotlib
+- Streamlit
+capabilities:
+- LEARN
+- PREDICT
+- EVALUATE
+learning_outcomes:
+- Understand time-series data, trend, seasonality, and noise.
+- Explain why time-series observations must remain in chronological order.
+- Understand forecast horizon, backtest windows, and step size.
+- Apply rolling-origin time-series cross-validation without using future observations
+  during training.
+- Compare Seasonal Naive, AutoARIMA, AutoETS, and AutoTheta forecasting models.
+- Evaluate forecasts using MAE, RMSE, and MAPE.
+- Compare advanced forecasting models against a simple seasonal baseline.
+- Generate and visualize a 12-month forecast using the full historical dataset.
+artifacts:
+  github: https://github.com/atanuduttagupta/ai-daily-practice/tree/main/AI/car-sales-forecasting
+  demo: https://ai-daily-practice-car-sales-forecasting.streamlit.app/
+  dataset: https://raw.githubusercontent.com/jbrownlee/Datasets/master/monthly-car-sales.csv
+  documentation: https://github.com/atanuduttagupta/ai-daily-practice/tree/main/AI/car-sales-forecasting
+experiences:
+- id: interactive-forecasting-lab
+  title: Interactive Monthly Car Sales Forecasting Lab
+  description: Explore historical monthly sales, configure backtesting settings, compare
+    forecasting models and error metrics, inspect backtest predictions, and generate
+    a future forecast.
+  topics:
+  - Time Series Forecasting
+  - Backtesting
+  - Model Evaluation
+  capabilities:
+  - LEARN
+  - PREDICT
+  - EVALUATE
+  artifacts:
+    github: https://github.com/atanuduttagupta/ai-daily-practice/tree/main/AI/car-sales-forecasting
+    demo: https://ai-daily-practice-car-sales-forecasting.streamlit.app/
+  execution:
+    requested: true
+    mode: external_demo
+    provider: Streamlit
+    url: https://ai-daily-practice-car-sales-forecasting.streamlit.app/
+relationships: []

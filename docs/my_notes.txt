@@ -1,4 +1,4 @@
-python -m validator.validate projects/rag/rag-001/project.yaml schemas/project.schema.json
+python -m validator.validate projects/ml/ml-006/project.yaml schemas/project.schema.json
 python -m pytest tests/test_importer.py -v
 python -m importer.import_project projects/rag/rag-001/project.yaml schemas/project.schema.json
 
