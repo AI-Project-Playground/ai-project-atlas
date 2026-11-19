@@ -1,0 +1,74 @@
+schema_version: '1.0'
+id: ml-007
+title: Bagging & Ensembling — Telecom Customer Churn Prediction
+domain: Machine Learning
+topics:
+- Ensemble Learning
+- Bagging
+- Bootstrap Aggregating
+- Random Forest
+- Boosting
+- Gradient Boosting
+- Voting Classifier
+- Stacking Classifier
+- Binary Classification
+- Customer Churn Prediction
+- ROC-AUC
+- Out-of-Bag Evaluation
+- Feature Preprocessing
+- Customer Risk Ranking
+project_type: machine_learning
+difficulty: intermediate
+status: completed
+technologies:
+- Python
+- scikit-learn
+- pandas
+- NumPy
+- Streamlit
+capabilities:
+- LEARN
+- CLASSIFY
+- PREDICT
+- EVALUATE
+learning_outcomes:
+- Explain how bagging combines bootstrap-trained models and reduces variance.
+- Explain how Random Forest adds random feature selection to bagged decision trees.
+- Distinguish bagging, boosting, voting, and stacking.
+- Build and compare individual classifiers and ensemble classifiers for customer churn
+  prediction.
+- Use pipelines to keep imputation, scaling, and one-hot encoding inside cross-validation
+  folds.
+- Evaluate binary classifiers using ROC-AUC.
+- Calculate top-fraction churn capture for a limited-capacity retention campaign.
+- Explain out-of-bag evaluation for bootstrap-based ensembles.
+- Interpret why ensemble models may not significantly outperform a strong simple baseline.
+artifacts:
+  github: https://github.com/atanuduttagupta/ai-daily-practice/tree/main/ML/ensembling-customer-churn
+  demo: https://ai-daily-practice-ensembling-customer-churn.streamlit.app/
+  dataset: https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv
+  documentation: https://github.com/atanuduttagupta/ai-daily-practice/tree/main/ML/ensembling-customer-churn
+experiences:
+- id: telecom-churn-ensemble-lab
+  title: Interactive Telecom Churn Ensemble Lab
+  description: Explore the IBM Telco customer churn dataset, configure training and
+    validation settings, compare seven classification approaches, inspect ROC-AUC
+    and top-fraction capture, and review ranked customer churn probabilities.
+  topics:
+  - Ensemble Learning
+  - Customer Churn Prediction
+  - Model Evaluation
+  capabilities:
+  - LEARN
+  - CLASSIFY
+  - PREDICT
+  - EVALUATE
+  artifacts:
+    github: https://github.com/atanuduttagupta/ai-daily-practice/tree/main/ML/ensembling-customer-churn
+    demo: https://ai-daily-practice-ensembling-customer-churn.streamlit.app/
+  execution:
+    requested: true
+    mode: external_demo
+    provider: Streamlit
+    url: https://ai-daily-practice-ensembling-customer-churn.streamlit.app/
+relationships: []

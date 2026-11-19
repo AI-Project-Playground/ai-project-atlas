@@ -36,7 +36,10 @@ domains:
         display_order: 5 
       - id: "ml-006"
         catalogue_reference: "ML-006"
-        display_order: 6       
+        display_order: 6   
+      - id: "ml-007"
+        catalogue_reference: "ML-007"
+        display_order: 7       
 
   - key: "deep-learning"
     name: "Deep Learning"
