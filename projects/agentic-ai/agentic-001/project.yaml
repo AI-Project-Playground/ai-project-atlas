@@ -1,0 +1,98 @@
+schema_version: "1.0"
+
+id: "agentic-001"
+
+title: "MCP Support Desk — Basic Model Context Protocol Demo"
+
+domain: "Agentic AI"
+
+topics:
+  - Model Context Protocol
+  - MCP Client
+  - MCP Server
+  - MCP Tools
+  - MCP Resources
+  - MCP Prompts
+  - JSON-RPC 2.0
+  - stdio Transport
+  - Tool Discovery
+  - Tool Execution
+  - Human-in-the-Loop Confirmation
+  - Error Handling
+  - AI Agent Integration
+
+project_type: "agentic_ai"
+
+difficulty: "beginner"
+
+status: "completed"
+
+technologies:
+  - Python
+  - Model Context Protocol Python SDK v2
+  - Streamlit
+  - asyncio
+
+capabilities:
+  - ACT
+  - RETRIEVE
+  - EVALUATE
+
+learning_outcomes:
+  - Understand the purpose of Model Context Protocol and the host-client-server architecture.
+  - Build an MCP server using the official Python MCP SDK v2 and MCPServer.
+  - Register typed server functions as MCP tools using decorators.
+  - Expose read-only application context through an MCP resource.
+  - Expose a reusable prompt template through an MCP prompt.
+  - Connect to an MCP server using the Client and stdio subprocess transport.
+  - Discover tools, resources, and prompts dynamically instead of hard-coding server capabilities in the client.
+  - Invoke MCP tools and interpret successful and error responses.
+  - Understand how a Streamlit host application can interact with an MCP server through a real MCP client.
+  - Apply explicit user confirmation before invoking a tool that changes state.
+
+tags:
+  - agentic-ai
+  - mcp
+  - model-context-protocol
+  - tools
+  - resources
+  - prompts
+  - client-server
+  - stdio
+  - streamlit
+  - python
+  - tool-discovery
+  - tool-execution
+  - json-rpc
+
+artifacts:
+  github: "https://github.com/atanuduttagupta/ai-daily-practice/tree/main/AI/mcp-simple-demo"
+  demo: "https://ai-daily-practice-mcp-simple-demo.streamlit.app/"
+  documentation: "https://github.com/atanuduttagupta/ai-daily-practice/tree/main/AI/mcp-simple-demo/README.md"
+
+experiences:
+  - id: "interactive-support-desk"
+    title: "Interactive MCP Support Desk"
+    description: "A Streamlit host application that connects to the support-desk MCP server over stdio, discovers its capabilities, invokes order and ticket tools, and reads the refund-policy resource."
+    topics:
+      - MCP Client
+      - MCP Server
+      - MCP Tools
+      - MCP Resources
+      - Tool Discovery
+      - stdio Transport
+      - Human-in-the-Loop Confirmation
+    capabilities:
+      - ACT
+      - RETRIEVE
+      - EVALUATE
+    artifacts:
+      github: "https://github.com/atanuduttagupta/ai-daily-practice/tree/main/AI/mcp-simple-demo"
+      demo: "https://ai-daily-practice-mcp-simple-demo.streamlit.app/"
+    execution:
+      requested: true
+      mode: "external_demo"
+      provider: "Streamlit"
+      url: "https://ai-daily-practice-mcp-simple-demo.streamlit.app/"
+
+relationships: []
